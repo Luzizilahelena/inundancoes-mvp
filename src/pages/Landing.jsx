@@ -325,7 +325,7 @@ export default function Landing() {
 
         /* ─── HOW IT WORKS ────────────────────── */
         .how-layout {
-          display: grid; grid-template-columns: 1fr 1.4fr;
+          display: grid; grid-template-columns: 1fr 2fr;
           gap: 5rem; align-items: start; margin-top: 4rem;
         }
         .how-steps { display: flex; flex-direction: column; gap: 4px; }
