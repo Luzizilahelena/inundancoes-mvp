@@ -210,7 +210,7 @@ export default function Landing() {
 
         .hero-title {
           font-family: var(--display);
-          font-size: clamp(3rem, 8vw, 6.5rem);
+          font-size: clamp(2.5rem, 7vw, 5.5rem);
           font-weight: 800; line-height: 0.95;
           letter-spacing: -0.03em;
           margin-bottom: 1.75rem;
@@ -325,7 +325,7 @@ export default function Landing() {
 
         /* ─── HOW IT WORKS ────────────────────── */
         .how-layout {
-          display: grid; grid-template-columns: 1fr 2fr;
+          display: grid; grid-template-columns: 1fr 1.4fr;
           gap: 5rem; align-items: start; margin-top: 4rem;
         }
         .how-steps { display: flex; flex-direction: column; gap: 4px; }
