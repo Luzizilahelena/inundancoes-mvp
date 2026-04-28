@@ -499,16 +499,16 @@ export default function Landing() {
           Inunda·SIG
         </a>
         <ul className="nav-links">
-          {[["Como funciona","como-funciona"],["Para quem","para-quem"],["Metodologia","metodologia"]].map(([l,id]) => (
-            <li key={id}><a href={`#${id}`} onClick={e=>{e.preventDefault();go(id);}}>{l}</a></li>
+          {[["Como funciona", "como-funciona"], ["Para quem", "para-quem"], ["Metodologia", "metodologia"]].map(([l, id]) => (
+            <li key={id}><a href={`#${id}`} onClick={e => { e.preventDefault(); go(id); }}>{l}</a></li>
           ))}
         </ul>
         <button className="nav-cta" onClick={() => navigate("/simulador")}>Abrir simulador →</button>
         <button className="nav-hamburger" onClick={() => setMenuOpen(o => !o)} aria-label="Menu">
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
             {menuOpen
-              ? <path d="M3 3l12 12M3 15L15 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"/>
-              : <path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+              ? <path d="M3 3l12 12M3 15L15 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              : <path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
             }
           </svg>
           {menuOpen ? "Fechar" : "Menu"}
@@ -516,8 +516,8 @@ export default function Landing() {
       </nav>
 
       <div className={`nav-drawer${menuOpen ? " open" : ""}`}>
-        {[["Como funciona","como-funciona"],["Para quem","para-quem"],["Metodologia","metodologia"]].map(([l,id]) => (
-          <a key={id} className="nav-drawer-link" href={`#${id}`} onClick={e=>{e.preventDefault();go(id);}}>{l}</a>
+        {[["Como funciona", "como-funciona"], ["Para quem", "para-quem"], ["Metodologia", "metodologia"]].map(([l, id]) => (
+          <a key={id} className="nav-drawer-link" href={`#${id}`} onClick={e => { e.preventDefault(); go(id); }}>{l}</a>
         ))}
         <div className="nav-drawer-sep" />
         <button className="nav-drawer-cta" onClick={() => { navigate("/simulador"); setMenuOpen(false); }}>
@@ -548,7 +548,7 @@ export default function Landing() {
             <button className="btn-main" onClick={() => navigate("/simulador")}>
               Executar simulação
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
             <button className="btn-ghost" onClick={() => go("como-funciona")}>Como funciona</button>
@@ -563,7 +563,7 @@ export default function Landing() {
       {/* TICKER */}
       <div className="ticker-wrap">
         <div className="ticker-track">
-          {Array(2).fill(["14 Municípios","100+ Bairros mapeados","Elevação SRTM real","3 Níveis de análise","Dados GADM 4.1","Luanda · Angola","Risco em tempo real","Open-Elevation API"]).flat().map((t,i) => (
+          {Array(2).fill(["14 Municípios", "100+ Bairros mapeados", "Elevação SRTM real", "3 Níveis de análise", "Dados GADM 4.1", "Luanda · Angola", "Risco em tempo real", "Open-Elevation API"]).flat().map((t, i) => (
             <span className="ticker-item" key={i}>{t} <span className="ticker-sep">✦</span></span>
           ))}
         </div>
@@ -573,12 +573,12 @@ export default function Landing() {
       <div id="como-funciona">
         <div className="section">
           <div className="eyebrow reveal">Como funciona</div>
-          <h2 className="section-title reveal d1">Três passos para analisar<br/>o risco de inundação</h2>
+          <h2 className="section-title reveal d1">Três passos para analisar<br />o risco de inundação</h2>
           <p className="section-sub reveal d2">Da selecção da área à interpretação dos resultados — simples, rápido e directo.</p>
           <div className="how-layout">
             <div className="how-steps reveal d2">
-              {HOW_STEPS.map((s,i) => (
-                <button key={s.num} className={`how-step-btn${activeStep===i?" active":""}`} onClick={() => setActiveStep(i)}>
+              {HOW_STEPS.map((s, i) => (
+                <button key={s.num} className={`how-step-btn${activeStep === i ? " active" : ""}`} onClick={() => setActiveStep(i)}>
                   <div className="how-step-progress" />
                   <div className="how-step-num">— {s.num}</div>
                   <div className="how-step-title">{s.title}</div>
@@ -592,7 +592,7 @@ export default function Landing() {
                 <div className="how-detail-title">{HOW_STEPS[activeStep].title}</div>
                 <p className="how-detail-desc">{HOW_STEPS[activeStep].desc}</p>
               </div>
-              <button className="btn-main" style={{marginTop:"2rem",alignSelf:"flex-start"}} onClick={() => navigate("/simulador")}>
+              <button className="btn-main" style={{ marginTop: "2rem", alignSelf: "flex-start" }} onClick={() => navigate("/simulador")}>
                 Experimentar agora →
               </button>
             </div>
@@ -602,12 +602,12 @@ export default function Landing() {
 
       {/* FOR WHOM */}
       <div id="para-quem" className="whom-bg section-full">
-        <div style={{maxWidth:1160,margin:"0 auto"}}>
+        <div style={{ maxWidth: 1160, margin: "0 auto" }}>
           <div className="eyebrow reveal">Para quem é</div>
-          <h2 className="section-title reveal d1">Uma ferramenta para quem<br/>toma decisões no território</h2>
+          <h2 className="section-title reveal d1">Uma ferramenta para quem<br />toma decisões no território</h2>
           <div className="whom-grid">
-            {FOR_WHOM.map((item,i) => (
-              <div className={`whom-card reveal d${(i%3)+1}`} key={item.title}>
+            {FOR_WHOM.map((item, i) => (
+              <div className={`whom-card reveal d${(i % 3) + 1}`} key={item.title}>
                 <span className="whom-icon">{item.icon}</span>
                 <div className="whom-title">{item.title}</div>
                 <p className="whom-desc">{item.desc}</p>
@@ -624,13 +624,13 @@ export default function Landing() {
           <h2 className="section-title reveal d1">Base de dados e fontes</h2>
           <div className="meth-layout">
             <div>
-              <p className="section-sub reveal d2" style={{marginBottom:"2rem"}}>
+              <p className="section-sub reveal d2" style={{ marginBottom: "2rem" }}>
                 O modelo combina dados geográficos oficiais, elevação real do terreno
                 e classificação de risco por área para produzir estimativas de impacto.
               </p>
               <table className="meth-table reveal d3">
                 <tbody>
-                  {SOURCES.map(([k,v]) => (<tr key={k}><td>{k}</td><td>{v}</td></tr>))}
+                  {SOURCES.map(([k, v]) => (<tr key={k}><td>{k}</td><td>{v}</td></tr>))}
                 </tbody>
               </table>
               <div className="meth-warn reveal d4">
@@ -649,7 +649,7 @@ export default function Landing() {
                 <button className="btn-main" onClick={() => navigate("/simulador")}>
                   Abrir simulador
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </button>
               </div>
