@@ -486,7 +486,7 @@ export default function Simulator() {
 
     if (heatPoints.length > 0) {
       heatRef.current = L.current.heatLayer(heatPoints, {
-        radius: 28, blur: 22, maxZoom: 17, max: 1.0, minOpacity: 0.35,
+        radius: 28, blur: 22, maxZoom: 19, max: 1.0, minOpacity: 0.35,
         gradient: {
           0.00: "#313695", 0.20: "#4575b4", 0.35: "#74add1",
           0.50: "#fee090", 0.65: "#fdae61", 0.80: "#f46d43",
